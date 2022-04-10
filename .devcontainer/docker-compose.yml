@@ -1,0 +1,39 @@
+version: "3.7"
+
+x-environment: &default-environment
+  POSTGRES_USER: vscode
+  POSTGRES_PASSWORD: notsecure
+  POSTGRES_DB: heinrich_health
+services:
+  backend:
+    networks:
+      - default
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile_dotnet
+    environment:
+      <<: *default-environment
+      PORT: 3000
+    ports:
+      - 3000:3000
+    volumes:
+      - ..:/workspace
+    user: vscode
+    command: sleep infinity
+  db:
+    image: "postgres:12"
+    restart: unless-stopped
+    networks:
+      - default
+    environment: *default-environment
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../postgresql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+
+volumes:
+  pgdata:
+
+networks:
+  default:

@@ -1,0 +1,10 @@
+{
+  "name": "HeinrichHealth",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "backend",
+  "workspaceFolder": "/workspace",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": ["dart-code.dart-code", "dart-code.flutter", "ms-dotnettools.csharp", "ms-azuretools.vscode-docker"]
+}
