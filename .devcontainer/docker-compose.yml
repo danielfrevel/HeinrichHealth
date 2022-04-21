@@ -15,11 +15,13 @@ services:
       <<: *default-environment
       PORT: 3000
     ports:
-      - 3000:3000
+      - 3000:3000 
+      - 5252:5252
     volumes:
       - ..:/workspace
     user: vscode
     command: sleep infinity
+
   db:
     image: "postgres:12"
     restart: unless-stopped
