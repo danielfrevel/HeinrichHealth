@@ -1,10 +1,26 @@
 {
   "name": "HeinrichHealth",
+  "service": "",
   "dockerComposeFile": "docker-compose.yml",
-  "service": "backend",
   "workspaceFolder": "/workspace",
+  "runArgs": ["--privileged", "-v", "/dev/bus/usb:/dev/bus/usb"],
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
-  "extensions": ["dart-code.dart-code", "dart-code.flutter", "ms-dotnettools.csharp", "ms-azuretools.vscode-docker"]
+  "extensions": [
+    "Fudge.auto-using",
+    "kreativ-software.csharpextensions",
+    "adrianwilczynski.namespace",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "ms-vsliveshare.vsliveshare",
+    "jmrog.vscode-nuget-package-manager",
+    "dart-code.dart-code",
+    "dart-code.flutter",
+    "ms-dotnettools.csharp",
+    "ms-azuretools.vscode-docker",
+    "jmrog.vscode-nuget-package-manager",
+    "esbenp.prettier-vscode",
+    "rangav.vscode-thunder-client",
+    "fernandoescolar.vscode-solution-explorer"
+  ]
 }

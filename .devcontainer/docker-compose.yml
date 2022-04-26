@@ -5,18 +5,28 @@ x-environment: &default-environment
   POSTGRES_PASSWORD: notsecure
   POSTGRES_DB: heinrich_health
 services:
+  frontend:
+    networks:
+      - default
+    build: 
+      context: ..
+      dockerfile: .devcontainer/dockerfile_flutter
+    volumes:
+      - ..:/workspace:rw
+
   backend:
     networks:
       - default
     build:
       context: ..
-      dockerfile: .devcontainer/Dockerfile_dotnet
+      dockerfile: .devcontainer/dockerfile_dotnet
     environment:
       <<: *default-environment
       PORT: 3000
     ports:
       - 3000:3000 
       - 5252:5252
+      - 7183:7183
     volumes:
       - ..:/workspace
     user: vscode
