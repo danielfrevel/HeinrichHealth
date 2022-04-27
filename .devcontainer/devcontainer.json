@@ -1,6 +1,6 @@
 {
   "name": "HeinrichHealth",
-  "service": "",
+  "service": "dev",
   "dockerComposeFile": "docker-compose.yml",
   "workspaceFolder": "/workspace",
   "runArgs": ["--privileged", "-v", "/dev/bus/usb:/dev/bus/usb"],

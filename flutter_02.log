@@ -1,0 +1,99 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter doctor
+
+## exception
+
+ProcessException: ProcessException: Permission denied
+  Command: /android-sdk/tools/bin/sdkmanager --licenses
+
+```
+#0      AndroidLicenseValidator.licensesAccepted (package:flutter_tools/src/android/android_workflow.dart:261:29)
+<asynchronous suspension>
+#1      AndroidLicenseValidator.validate (package:flutter_tools/src/android/android_workflow.dart:194:19)
+<asynchronous suspension>
+#2      GroupedValidator.validate (package:flutter_tools/src/doctor.dart:329:52)
+#3      _AsyncAwaitCompleter.start (dart:async-patch/async_patch.dart:49:6)
+#4      GroupedValidator.validate (package:flutter_tools/src/doctor.dart:326:36)
+#5      Doctor.startValidatorTasks (package:flutter_tools/src/doctor.dart:129:52)
+#6      Doctor.diagnose (package:flutter_tools/src/doctor.dart:200:41)
+#7      _AsyncAwaitCompleter.start (dart:async-patch/async_patch.dart:49:6)
+#8      Doctor.diagnose (package:flutter_tools/src/doctor.dart:190:24)
+#9      DoctorCommand.runCommand (package:flutter_tools/src/commands/doctor.dart:48:39)
+#10     _AsyncAwaitCompleter.start (dart:async-patch/async_patch.dart:49:6)
+#11     DoctorCommand.runCommand (package:flutter_tools/src/commands/doctor.dart:34:42)
+#12     FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:559:18)
+#13     _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:77:64)
+#14     _rootRunUnary (dart:async/zone.dart:1132:38)
+#15     _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#16     _FutureListener.handleValue (dart:async/future_impl.dart:126:18)
+#17     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:639:45)
+#18     Future._propagateToListeners (dart:async/future_impl.dart:668:32)
+#19     Future._complete (dart:async/future_impl.dart:473:7)
+#20     _SyncCompleter.complete (dart:async/future_impl.dart:51:12)
+#21     _AsyncAwaitCompleter.complete.<anonymous closure> (dart:async-patch/async_patch.dart:33:20)
+#22     _rootRun (dart:async/zone.dart:1124:13)
+#23     _CustomZone.run (dart:async/zone.dart:1021:19)
+#24     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:947:23)
+#25     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#26     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#27     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:391:30)
+#28     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:416:5)
+#29     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:171:12)
+```
+
+## flutter doctor
+
+```
+encountered exception: ProcessException: Permission denied
+  Command: /android-sdk/tools/bin/sdkmanager --licenses
+
+#0      AndroidLicenseValidator.licensesAccepted (package:flutter_tools/src/android/android_workflow.dart:261:29)
+<asynchronous suspension>
+#1      AndroidLicenseValidator.validate (package:flutter_tools/src/android/android_workflow.dart:194:19)
+<asynchronous suspension>
+#2      GroupedValidator.validate (package:flutter_tools/src/doctor.dart:329:52)
+#3      _AsyncAwaitCompleter.start (dart:async-patch/async_patch.dart:49:6)
+#4      GroupedValidator.validate (package:flutter_tools/src/doctor.dart:326:36)
+#5      Doctor.startValidatorTasks (package:flutter_tools/src/doctor.dart:129:52)
+#6      Doctor.diagnose (package:flutter_tools/src/doctor.dart:200:41)
+#7      _AsyncAwaitCompleter.start (dart:async-patch/async_patch.dart:49:6)
+#8      Doctor.diagnose (package:flutter_tools/src/doctor.dart:190:24)
+#9      _doctorText.<anonymous closure> (package:flutter_tools/runner.dart:188:26)
+#10     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:142:29)
+#11     _AsyncAwaitCompleter.start (dart:async-patch/async_patch.dart:49:6)
+#12     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:142:7)
+#13     _rootRun (dart:async/zone.dart:1124:13)
+#14     _CustomZone.run (dart:async/zone.dart:1021:19)
+#15     _runZoned (dart:async/zone.dart:1516:10)
+#16     runZoned (dart:async/zone.dart:1463:12)
+#17     AppContext.run (package:flutter_tools/src/base/context.dart:141:18)
+#18     _AsyncAwaitCompleter.start (dart:async-patch/async_patch.dart:49:6)
+#19     AppContext.run (package:flutter_tools/src/base/context.dart:129:19)
+#20     _doctorText (package:flutter_tools/runner.dart:187:19)
+#21     _AsyncAwaitCompleter.start (dart:async-patch/async_patch.dart:49:6)
+#22     _doctorText (package:flutter_tools/runner.dart:183:27)
+#23     _createLocalCrashReport (package:flutter_tools/runner.dart:165:32)
+#24     _AsyncAwaitCompleter.start (dart:async-patch/async_patch.dart:49:6)
+#25     _createLocalCrashReport (package:flutter_tools/runner.dart:150:37)
+#26     _handleToolError (package:flutter_tools/runner.dart:120:33)
+#27     _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:77:64)
+#28     _rootRunUnary (dart:async/zone.dart:1132:38)
+#29     _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#30     _FutureListener.handleValue (dart:async/future_impl.dart:126:18)
+#31     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:639:45)
+#32     Future._propagateToListeners (dart:async/future_impl.dart:668:32)
+#33     Future._complete (dart:async/future_impl.dart:473:7)
+#34     _SyncCompleter.complete (dart:async/future_impl.dart:51:12)
+#35     _AsyncAwaitCompleter.complete.<anonymous closure> (dart:async-patch/async_patch.dart:33:20)
+#36     _rootRun (dart:async/zone.dart:1124:13)
+#37     _CustomZone.run (dart:async/zone.dart:1021:19)
+#38     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:947:23)
+#39     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#40     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#41     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:391:30)
+#42     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:416:5)
+#43     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:171:12)
+```
