@@ -3,6 +3,7 @@
   "service": "dev",
   "dockerComposeFile": "docker-compose.yml",
   "workspaceFolder": "/workspace",
+  "postStartCommand": "git config --global --add safe.directory /flutter",
   "runArgs": ["--privileged", "-v", "/dev/bus/usb:/dev/bus/usb"],
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"

@@ -1,7 +1,7 @@
 version: "3.7"
 
 x-environment: &default-environment
-  POSTGRES_USER: vscode
+  POSTGRES_USER: root
   POSTGRES_PASSWORD: notsecure
   POSTGRES_DB: heinrich_health
 
@@ -16,7 +16,7 @@ services:
       - ..:/workspace:rw
     environment:
       <<: *default-environment
-    user: vscode
+    user: root
     depends_on:
       - db
     command: sleep infinity
