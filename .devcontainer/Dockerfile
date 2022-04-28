@@ -45,4 +45,4 @@ RUN flutter config --no-analytics
 # Set a useful default shell
 ENV SHELL /bin/bash
 
-user root
+USER root

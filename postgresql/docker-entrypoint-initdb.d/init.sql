@@ -20,10 +20,11 @@ create table User (
     Bodyfat_pct double,
     Login bigint not null,
     foreign key (Login) references Login(LoginID)
+    -- TODO: fehlen hier keine Foreign Keys?
     );
 
 
-create table Trainingssession (
+create table TrainingSession (
     SessionID bigint not null primary key auto_increment,
     Duration_minutes int,
     Date date,
@@ -32,7 +33,7 @@ create table Trainingssession (
     );
 
 
-create table Weightliftingsession (
+create table WeightliftingSession (
     WLSessionID bigint not null primary key auto_increment,
     name varchar(50) not null,
     SessionID bigint not null,
