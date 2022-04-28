@@ -1,5 +1,6 @@
 using HeinrichData.Db;
 using HeinrichData.Entities;
+using HeinrichData.Manager;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HeinrichApi.Controllers;
@@ -7,17 +8,16 @@ namespace HeinrichApi.Controllers;
 
 public class TestController : BaseController
 {
-    private readonly LoginContext context;
+    private readonly IBaseManager<Login> manager;
 
-    public TestController(LoginContext ctx)
+    public TestController(IBaseManager<Login> manager)
     {
-        this.context = ctx;
+        this.manager = manager;
     }
-
 
     [HttpGet]
     public ActionResult<IEnumerable<Login>> bruh()
     {
-        return this.context.Set<Login>().ToList();
+        return this.manager.GetAll().ToList();
     }
 }

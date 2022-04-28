@@ -3,7 +3,7 @@
   "service": "dev",
   "dockerComposeFile": "docker-compose.yml",
   "workspaceFolder": "/workspace",
-  "postStartCommand": "git config --global --add safe.directory /flutter",
+  "postStartCommand": "git config --global --add safe.directory /flutter && dotnet restore",
   "runArgs": ["--privileged", "-v", "/dev/bus/usb:/dev/bus/usb"],
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
@@ -22,6 +22,8 @@
     "jmrog.vscode-nuget-package-manager",
     "esbenp.prettier-vscode",
     "rangav.vscode-thunder-client",
-    "fernandoescolar.vscode-solution-explorer"
+    "fernandoescolar.vscode-solution-explorer",
+    "idered.iridium-database"
+    // "cweijan.vscode-postgresql-client2"
   ]
 }

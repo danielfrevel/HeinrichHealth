@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "HeinrichHealth",
+      "path": "."
+    },
+    {
+      "name": "Flutter",
+      "path": "./heinrichhealthapp"
+    }
+  ],
+  "settings": {
+    "editor.formatOnType": true,
+    "omnisharp.defaultLaunchSolution": "HeinrichHealth.sln",
+    "omnisharp.enableAsyncCompletion": true
+  }
+}

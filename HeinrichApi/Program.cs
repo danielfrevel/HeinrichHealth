@@ -1,5 +1,7 @@
 using HeinrichData.Db;
+using HeinrichData.Entities;
 using HeinrichData.Manager;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +12,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<LoginContext>();
+builder.Services.AddDbContext<BaseContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("default")));
+builder.Services.AddScoped<IBaseManager<Login>, Manager<Login>>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -21,7 +26,7 @@ if (app.Environment.IsDevelopment())
 }
 
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
