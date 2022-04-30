@@ -1,5 +1,5 @@
 FROM ubuntu:20.04 as base 
-
+USER root
 
 # Ensure apt is in non-interactive to avoid prompts
 ENV DEBIAN_FRONTEND=noninteractive
@@ -16,7 +16,6 @@ RUN apt-get install -y iputils-ping
 RUN apt-get install -y dotnet-sdk-6.0
 ENV ASPNETCORE_URLS=http://*:5000
 
-USER root
 RUN mkdir -p /usr/share/man/man1 \
     && mkdir -p /usr/share/man/man7
 
@@ -45,4 +44,3 @@ RUN flutter config --no-analytics
 # Set a useful default shell
 ENV SHELL /bin/bash
 
-USER root

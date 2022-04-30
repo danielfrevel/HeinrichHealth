@@ -1,9 +1,9 @@
 version: "3.7"
 
 x-environment: &default-environment
-  POSTGRES_USER: root
+  POSTGRES_USER: vscode
   POSTGRES_PASSWORD: notsecure
-  POSTGRES_DB: heinrich_health
+  POSTGRES_DB: HeinrichHealth
 
 services:
   dev:
@@ -13,28 +13,23 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ..:/workspace:rw
+      - ..:/workspace
     environment:
       <<: *default-environment
-    user: root
     depends_on:
       - db
     command: sleep infinity
 
   db:
     image: "postgres:12"
-    restart: unless-stopped
     networks:
       - default
     environment: *default-environment
     ports:
       - 5432:5432
     volumes:
-      - pgdata:/var/lib/postgresql/data
-      - ../postgresql/scripts:/docker-entrypoint-initdb.d
-
-volumes:
-  pgdata:
+      - ./pg-volume:/var/lib/postgresql/data
+      - ../postgresql/init:/docker-entrypoint-initdb.d
 
 networks:
   default:

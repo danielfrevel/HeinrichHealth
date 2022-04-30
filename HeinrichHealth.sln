@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeinrichApi", "HeinrichApi\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeinrichData", "HeinrichData\HeinrichData.csproj", "{E1422703-44FF-4CC7-8620-4C0BF32C4BFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeinrichApplication", "HeinrichApplication\HeinrichApplication.csproj", "{8B532B9D-CDFF-48E2-8ED2-9B94E0FB47C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{E1422703-44FF-4CC7-8620-4C0BF32C4BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1422703-44FF-4CC7-8620-4C0BF32C4BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1422703-44FF-4CC7-8620-4C0BF32C4BFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B532B9D-CDFF-48E2-8ED2-9B94E0FB47C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B532B9D-CDFF-48E2-8ED2-9B94E0FB47C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B532B9D-CDFF-48E2-8ED2-9B94E0FB47C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B532B9D-CDFF-48E2-8ED2-9B94E0FB47C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
