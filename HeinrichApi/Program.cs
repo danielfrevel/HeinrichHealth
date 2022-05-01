@@ -1,6 +1,7 @@
 using HeinrichData.Db;
 using HeinrichData.Entities;
 using HeinrichData.Manager;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

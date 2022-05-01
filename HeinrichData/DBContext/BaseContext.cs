@@ -16,6 +16,14 @@ public class BaseContext : DbContext
     {
     }
 
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Login>()
+            .HasKey(b => b.Id)
+            .HasName("Id");
+    }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder
         .UseNpgsql();
