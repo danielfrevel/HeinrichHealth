@@ -24,7 +24,11 @@ services:
     image: "postgres:12"
     networks:
       - default
-    environment: *default-environment
+    environment:
+      - POSTGRES_USER=vscode
+      - POSTGRES_PASSWORD=notsecure
+      - POSTGRES_DB=HeinrichHealth
+
     ports:
       - 5432:5432
     volumes:
