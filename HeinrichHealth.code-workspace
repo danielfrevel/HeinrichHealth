@@ -6,7 +6,7 @@ s{
     },
     {
       "name": "Flutter",
-      "path": "./heinrichhealthapp"
+      "path": "./clientApp"
     }
   ],
   "settings": {
@@ -18,10 +18,11 @@ s{
     "**/bin": true,
     "**/obj": true,
     ".git": true,
-    "**/node_modules": true,
-    "**/.angular": true,
     "**/.vs": true,
-    "**/packages": true
+    "**/packages": true,
+    ".idea" :true,
+    ".packages": true,
+
   },
   }
 }
