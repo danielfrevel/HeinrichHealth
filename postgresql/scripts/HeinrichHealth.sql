@@ -16,7 +16,7 @@ CREATE TABLE "HHUser"(
 	FOREIGN KEY ("Login")
 		REFERENCES "Login" ("Id")
 );
-CREATE TABLE "Trainingssession"(
+CREATE TABLE "TrainingsSession"(
 	"Id" serial PRIMARY KEY,
 	"Duration_minutes" INT,
 	"Session_date" DATE,
@@ -29,7 +29,7 @@ CREATE TABLE "WeightliftingSession"(
 	"Name" VARCHAR (50),
 	"SessionID" serial NOT NULL,
 	FOREIGN KEY ("SessionID")
-		REFERENCES "Trainingssession" ("Id")
+		REFERENCES "TrainingsSession" ("Id")
 );
 CREATE TABLE "WeightliftingExercise"(
 	"Id" serial PRIMARY KEY,

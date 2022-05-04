@@ -28,12 +28,11 @@ services:
       - POSTGRES_USER=vscode
       - POSTGRES_PASSWORD=notsecure
       - POSTGRES_DB=HeinrichHealth
-
+      - PGDATA= /var/lib/postgresql/data/some_name
     ports:
       - 5432:5432
     volumes:
-      - ./pg-volume:/var/lib/postgresql/data
-      - ../postgresql/init:/docker-entrypoint-initdb.d
+      - ./pg-volume:/var/lib/postgresql/data/some_name
 
 networks:
   default:

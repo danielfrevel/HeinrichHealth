@@ -22,6 +22,13 @@ public class BaseContext : DbContext
         modelBuilder.Entity<Login>()
             .HasKey(b => b.Id)
             .HasName("Id");
+        modelBuilder.Entity<HHUser>()
+        .HasKey(b => b.Id)
+        .HasName("Id");
+        modelBuilder.Entity<TrainingsSession>()
+            .HasKey(b => b.Id)
+            .HasName("Id");
+
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

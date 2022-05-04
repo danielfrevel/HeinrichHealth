@@ -1,4 +1,4 @@
-s{
+{
   "folders": [
     {
       "name": "HeinrichHealth",
@@ -13,16 +13,15 @@ s{
     "editor.formatOnType": true,
     "omnisharp.defaultLaunchSolution": "HeinrichHealth.sln",
     "omnisharp.enableAsyncCompletion": true,
-"files.exclude": {
-    "**/.git": true,
-    "**/bin": true,
-    "**/obj": true,
-    ".git": true,
-    "**/.vs": true,
-    "**/packages": true,
-    ".idea" :true,
-    ".packages": true,
-
-  },
+    "files.exclude": {
+      "**/.git": true,
+      "**/bin": true,
+      "**/obj": true,
+      ".git": true,
+      "**/.vs": true,
+      "**/packages": true,
+      ".idea": true,
+      ".packages": true
+    }
   }
 }
