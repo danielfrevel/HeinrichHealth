@@ -1,3 +1,4 @@
+using System.Net;
 using HeinrichData.Db;
 using HeinrichData.Entities;
 using HeinrichData.Manager;
@@ -20,19 +21,19 @@ public class WeightTrainingController : BaseController
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<Login>> bruh()
+    public ActionResult<IEnumerable<Login>> GetLogins()
     {
         return this.loginManager.GetAll().ToList();
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<HHUser>> bruh1()
+    public ActionResult<IEnumerable<HHUser>> GetUsers()
     {
         return this.userManager.GetAll().ToList();
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<TrainingsSession>> bruh2()
+    public ActionResult<IEnumerable<TrainingsSession>> GetTrainingsSessions()
     {
         return this.sessionManager.GetAll().ToList();
     }

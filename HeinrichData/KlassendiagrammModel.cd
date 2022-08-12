@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HeinrichData.Db.BaseContext">
+    <Position X="10.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DBContext\BaseContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeinrichData.Entities.BaseEntity">
+    <Position X="6.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\BaseEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeinrichData.Entities.HHUser" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAABAAAAAAIAYAAAAAAAAAAAAAAABAQAAAAAAA=</HashCode>
+      <FileName>Entities\HHUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeinrichData.Entities.TrainingsSession" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAgQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Trainingssession.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeinrichData.Entities.Login" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeinrichData.Manager.Manager&lt;T&gt;">
+    <Position X="8.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIBAAAAAAAAAAAAAAAAAAAAAAEIAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Manager\Manager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="HeinrichData.Manager.IBaseManager&lt;T&gt;">
+    <Position X="6.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAEIAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Manager\IBaseManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
