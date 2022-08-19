@@ -14,6 +14,8 @@ RUN apt-get update;
 RUN apt-get install -y apt-transport-https 
 RUN apt-get install -y iputils-ping
 RUN apt-get install -y dotnet-sdk-6.0
+RUN apt install default-jdk -y
+
 ENV ASPNETCORE_URLS=http://*:5000
 
 RUN mkdir -p /usr/share/man/man1 \
