@@ -14,7 +14,7 @@ RUN apt-get update;
 RUN apt-get install -y apt-transport-https 
 RUN apt-get install -y iputils-ping
 RUN apt-get install -y dotnet-sdk-6.0
-RUN apt install default-jdk -y
+RUN apt install openjdk-8-jdk -y
 
 ENV ASPNETCORE_URLS=http://*:5000
 
@@ -33,6 +33,7 @@ ENV PATH="/android-sdk/tools/bin:/android-sdk/build-tools:/android-sdk/platform-
 
 # SDK manager
 RUN yes | sdkmanager --licenses
+
 RUN sdkmanager "platforms;android-28" "platform-tools" "build-tools;28.0.3"
 
 # Flutter
