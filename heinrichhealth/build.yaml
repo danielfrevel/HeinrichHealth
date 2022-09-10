@@ -1,0 +1,12 @@
+targets:
+  $default:
+    sources:
+      - lib/Services/swagger/**
+    builders:
+      chopper_generator:
+        options:
+          header: "//Generated code"
+      swagger_dart_code_generator:
+        options:
+          input_folder: "lib/Services/swagger"
+          output_folder: "lib/Services/generated"

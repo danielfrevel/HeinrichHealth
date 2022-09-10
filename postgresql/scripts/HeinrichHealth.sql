@@ -48,3 +48,6 @@ CREATE TABLE "WeightliftingSet"(
 	FOREIGN KEY ("ExerciseID")
 		REFERENCES "WeightliftingExercise" ("Id")
 );
+
+#Trainingsession -> WeightliftingSession -> WLExcersise -> WL-Set  
+

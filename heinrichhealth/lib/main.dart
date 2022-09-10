@@ -1,72 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:heinrichhealth/Nutrition/nutrition_main.dart';
+import 'package:heinrichhealth/Training/training_main.dart';
+
+const Color primaryColor = Color(0x561ab9);
+const Color accentColor = Color(0xB6A4C7);
+const TextStyle textStyle = TextStyle(color: Colors.white);
+const TextStyle textStyleSubItems = TextStyle(color: Colors.grey);
 
 void main() {
-  runApp(const MyApp());
+  runApp(const HeinrichMain());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class HeinrichMain extends StatelessWidget {
+  const HeinrichMain({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'HeinrichHealth',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.lightBlue,
       ),
-      home: const MyHomePage(title: 'HeinrichHealth'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 420;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-      if (_counter > 430) {
-        _counter = 420;
-      }
-      ;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Leon ist ein HS',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      initialRoute: "/Training",
+      routes: {
+        "/Nutrition": (context) => const NutritionPage(),
+        "/Training": (context) => const TrainingPage(),
+      },
     );
   }
 }
