@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:heinrichhealth/Services/session_service.dart';
+import 'package:heinrichhealth/Services/generated/HeinrichHealth.swagger.dart';
+import 'package:heinrichhealth/Services/workout-service.dart';
 import 'package:heinrichhealth/Shared/heinrich_drawer.dart';
 import 'package:heinrichhealth/main.dart';
 
@@ -37,6 +38,28 @@ class _HeinrichHistoryState extends State<HeinrichHistory> {
   }
 }
 
+class HeinrichCardDetails extends StatelessWidget {
+  const HeinrichCardDetails(
+      {super.key, required this.session, required this.workouts});
+
+  // "Duration_minutes" INT,
+  // "Session_date" DATE,
+
+  // List view für workouts
+
+  // WeightliftingSession.Name, Trainingsession.Session_date
+  // for each exc
+  // Excesize.Sets WeightliftingSet.Weight .Reps
+
+  final List workouts;
+  final TrainingsSession session;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
 class HeinrichSessionCard extends StatefulWidget {
   const HeinrichSessionCard(
       {Key? key, required this.workoutId, required this.sessionService})
@@ -50,7 +73,11 @@ class HeinrichSessionCard extends StatefulWidget {
 class _HeinrichSessionCardState extends State<HeinrichSessionCard> {
   @override
   Widget build(BuildContext context) {
-    var session = widget.sessionService.findSession(widget.workoutId);
+    TrainingsSession session =
+        widget.sessionService.findSession(widget.workoutId);
+
+    List workouts =
+        widget.sessionService.getWorkoutsForSession(widget.workoutId);
 
     return Center(
       child: Card(
@@ -60,11 +87,12 @@ class _HeinrichSessionCardState extends State<HeinrichSessionCard> {
             InkWell(
               child: ListTile(
                 onTap: () {
-                  // Navigator.push(
-                  // context,
-                  // MaterialPageRoute(
-                  //   builder: (context) => DetailScreen(title: myController.text),
-                  // )
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => HeinrichCardDetails(
+                            session = session, workouts = workouts)),
+                  );
                 },
                 leading: Icon(Icons.monitor_weight),
                 title: Text(session.id.toString()),
